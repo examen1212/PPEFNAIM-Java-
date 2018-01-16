@@ -40,7 +40,7 @@ public class vueconnection extends JFrame implements ActionListener, KeyListener
 		this.unPanel.setBounds(50, 150, 400, 180);
 		this.unPanel.setBackground(Color.yellow);
 		this.unPanel.setLayout(new GridLayout(3,2)); // Definir une matrice (une grille)
-		this.unPanel.add(new JLabel ("Login : ")); // De base le premier élément ajouter est à la position 1,1 du GridLayout
+		this.unPanel.add(new JLabel ("Login : ")); // De base le premier Ã©lÃ©ment ajouter est Ã  la position 1,1 du GridLayout
 		this.unPanel.add(this.txtlogin);
 		this.unPanel.add(new JLabel("Mdp : "));
 		this.unPanel.add(this.txtpwd);
@@ -50,14 +50,14 @@ public class vueconnection extends JFrame implements ActionListener, KeyListener
 		this.unPanel.setVisible(true);
 		this.add(this.unPanel);
 		
-		// ajout de l'image à  la fenêtre
-		ImageIcon logo = new ImageIcon ("src/image/image.png");
+		// ajout de l'image Ã   la fenÃªtre
+		ImageIcon logo = new ImageIcon ("src/image/logo-fnaim.png");
 		JLabel lbLogo = new JLabel (logo);
 		lbLogo.setBounds(50, 20, 400, 120);
 		this.add(lbLogo);
 		
 		// ajout de l'icone en haut a gauche
-		ImageIcon logoPetit = new ImageIcon ("src/image/imagePetit.png");
+		ImageIcon logoPetit = new ImageIcon ("src/image/logo-fnaim.png");
 		this.setIconImage(logoPetit.getImage());
 
 		//rendre les boutons cliquables
@@ -65,7 +65,7 @@ public class vueconnection extends JFrame implements ActionListener, KeyListener
 		this.btSeConnecter.addActionListener(this);
 		
 		
-		//rendre la touche entré écoutable
+		//rendre la touche entrÃ© Ã©coutable
 		this.txtlogin.addKeyListener(this);
 		this.txtpwd.addKeyListener(this);
 		
@@ -98,7 +98,7 @@ public class vueconnection extends JFrame implements ActionListener, KeyListener
 				this.txtlogin.setText("");
 				this.txtpwd.setText("");
 			}else {
-				JOptionPane.showMessageDialog(this, "Bienvenue ! ","Connection réussie",JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(this, "Bienvenue ! ","Connection rÃ©ussie",JOptionPane.INFORMATION_MESSAGE);
 				//appel de la JFrame general
 				main.rendreVisible(false);
 				new vuegenerale(droits);
